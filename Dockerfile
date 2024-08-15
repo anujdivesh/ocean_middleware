@@ -23,7 +23,7 @@ COPY entrypoint.sh /code/
 RUN chmod +x /code/entrypoint.sh
 RUN sed -i 's/\r$//g' /code/entrypoint.sh
 # Set the entrypoint
-ENTRYPOINT ["/code/entrypoint.sh"]
+#ENTRYPOINT ["/code/entrypoint.sh"]
 
 #SSSSENTRYPOINT ["sh", "/entrypoint.sh"]
 

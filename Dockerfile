@@ -22,10 +22,8 @@ RUN python /code/manage.py collectstatic --noinput
 COPY entrypoint.sh /code/
 RUN chmod +x /code/entrypoint.sh
 RUN sed -i 's/\r$//g' /code/entrypoint.sh
-
-CMD ["python", "/code/manage.py","runserver", "0.0.0.0:8000"]
 # Set the entrypoint
-#ENTRYPOINT ["/code/entrypoint.sh"]
+ENTRYPOINT ["/code/entrypoint.sh"]
 
 #SSSSENTRYPOINT ["sh", "/entrypoint.sh"]
 

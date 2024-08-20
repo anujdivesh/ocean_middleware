@@ -1,6 +1,7 @@
 # Pull base image
 FROM python:3.11.5-slim-bullseye
 
+RUN apt-get update && apt-get install -y postgresql-client
 # Set environment variables
 ENV PIP_DISABLE_PIP_VERSION_CHECK 1
 ENV PYTHONDONTWRITEBYTECODE 1
